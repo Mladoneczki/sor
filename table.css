@@ -1,0 +1,15 @@
+
+th{
+    font-weight: bold;
+}
+table,th,td{
+    text-align: center;
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+tr:nth-child(even) {
+    background-color: gray;
+}
+th,td{
+    padding: 2px 12px 2px 12px;
+}

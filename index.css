@@ -12,8 +12,8 @@ html {
   background-image: url(design/teglafal.jpg);
 }
 body {
-    margin: auto;
-    margin-top: 3rem;
+  margin: auto;
+  margin-top: 3rem;
 }
 main {
   box-sizing: border-box;
@@ -46,8 +46,7 @@ nav li {
   list-style: none;
   border: 1px solid white;
   border-radius: 4px;
-  padding-left: 8px;
-  padding-right: 32px;
+  padding: 6px 32px 6px 18px;
 }
 nav li:hover {
   background-color: lightgrey;
@@ -55,7 +54,7 @@ nav li:hover {
 nav a {
   text-decoration: none;
   color: red;
-  font-style: bold;
+  font-weight: bold;
 }
 nav a:hover {
   color: white;
@@ -74,6 +73,7 @@ article ul {
 }
 article h2 {
   font-size: 15px;
+  padding-left: 1rem;
 }
 article img {
   max-width: 150px;
@@ -86,13 +86,22 @@ article img {
 }
 footer {
   height: 30px;
-  background-color:gray;
+  background-color: gray;
   color: white;
   text-align: center;
-  align-items: center;
+  line-height: 30px;
 }
 .grid {
   display: grid;
   grid-template-areas: "article nav";
   grid-template-columns: 70% 30%;
+}
+main {
+  @media screen and (max-width: 700px) {
+    width: 95%;
+    grid-template-areas:
+      "nav"
+      "article";
+    grid-template-columns: 1fr;
+  }
 }
